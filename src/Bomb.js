@@ -10,14 +10,14 @@ export default class Bomb extends Component {
        }
    }
    
-   countdownText = () => {
-       return (this.props.initialCount === 0) ? <h4>Boom!</h4> : <h4>120 seconds left before I go boom!</h4>
-   }
+//    countdownText = () => {
+//        return (this.state.secondsLeft === 0) ? <h4>Boom!</h4> : <h4>{this.state.secondsLeft} seconds left before I go boom!</h4>
+//    }
    
    render() {
         return (
             <div>
-                {this.countdownText()}
+                {(this.state.secondsLeft === 0) ? <h4>Boom!</h4> : <h4>{this.state.secondsLeft} seconds left before I go boom!</h4>}
             </div>
         )
     }
